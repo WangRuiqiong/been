@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>测试</title>
+		<script src="jquery-3.3.1.js"></script>
+		<script src="jquery-mousewheel.js"></script>
+		<script src="jquery.rotate.min.js"></script>
+		<style>
+			body{
+				margin:0;
+				overflow:hidden;
+			}
+			
+			div#container{
+				/*border:1px solid red;*/
+				position:relative;
+				bottom:0px;
+			}
+			
+			div.element{
+				/*border:1px solid blue;*/
+				margin:0;
+				height:0;
+				overflow:hidden;
+			}
+			
+			@keyframes rotate{
+				0%{ 
+						transform:rotate(0deg); 
+				  }
+				100%{ 
+						transform:rotate(360deg); 
+					}
+			}
+			
+			ul#font{
+				width:100%;
+				height:300px;
+				margin:0 auto;
+				background-repeat:no-repeat;
+				background-size:cover;
+				line-height:300px;
+				margin-bottom:150px;
+				font-family: "微软雅黑";
+				top:-30px;
+				left:350px;
+				display:flex;
+				justify-content:space-between;
+				padding: 0;
+			}
+			
+			ul#font>li{
+				list-style:none;
+			}
+			
+			ul#font>li>a{
+				text-decoration:none;
+				color:#2b2b2b;
+				font-size:1.5rem;
+			}
+			
+			ul#font>li>a:hover{
+				color:orangered;
+			}
+		</style>
+		<!--手机端-->
+		<style>
+			ul#h5-font{
+				width:100%;
+				height:300px;
+				margin:0 auto;
+				background-repeat:no-repeat;
+				background-size:cover;
+				line-height:300px;
+				font-family: "微软雅黑";
+				top:-30px;
+				left:350px;
+				display:flex;
+				justify-content:space-between;
+				padding: 0;
+			}
+			
+			ul#h5-font>li{
+				list-style:none;
+			}
+			
+			ul#h5-font>li>a{
+				text-decoration:none;
+				color:#2b2b2b;
+				/*font-size:1.5rem;*/
+			}
+			
+			ul#h5-font>li>a:hover{
+				color:orangered;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="element" style="background:url('image/headBg.png');background-repeat:no-repeat;background-size:100% 100%;position:relative;">
+				<!--<img src="image/head.jpg" class="img"/>-->
+				<img id="headFont" src="image/headFont.png" style="position:absolute;left:51%;opacity:0;width: 18%;height: 11%;"/>
+				<!--top:315px;-->
+				<img id="girl" src="image/girl.png" style="position:absolute;bottom:16%;opacity:0;width: 38%;height: 73%;" />
+				<!--left:365px-->
+				<img id="product" src="image/product.png" style="position:absolute;right:0px;top:44%;opacity:0;width:26%;height:40%;"/>
+				<!--right:285px-->
+			</div>
+			<div class="element" style="position:relative;width:580px;height:580px;margin:0 auto;">
+				<div id="playFather" style="margin:0 auto;">
+					<embed id="vid" src='http://player.youku.com/player.php/sid/XMzcyMDU2OTE2NA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' style="text-align:center;margin:0 auto;display:none;margin-bottom:12%;" allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+					<div id="playElement" style="position:relative; width:580px;height:580px;margin:0 auto;cursor:pointer;">
+						<!--<a href="http://player.youku.com/player.php/sid/XMzcyMDU2OTE2NA==/v.swf" target="_blcnk">-->
+							<img id="play" src="image/a.png" style="width:580px;height:580px;display:block;margin:0 auto;top:10px;left:10px;position:absolute;"/>
+							<img id="orange" src="image/OrangeRing.png" style="animation:rotate 10s linear infinite; width:575px;height:575px;position:absolute;left:13px;top:13px;"></img>
+						<!--</a>-->	
+					</div>
+					<!--<div ">-->
+					<ul id="font"  style="background-image:url('image/huawen.png')";>
+						<li><a href="http://www.v-touch.net/a/zhongtianantai/">V-SCLING SHAMPOO</a></li>
+						<li><a href="http://www.v-touch.net/a/jishutixi/">V-OLIM</a></li>
+						<li><a href="http://www.v-touch.net/a/chanpinzhongxin/">V-TOUCH</a></li>
+						<li><a href="http://www.v-touch.net/a/jiejuefangan/">关于我们</a></li>
+						<li><a href="http://www.v-touch.net/a/lianxiwomen/">联系我们</a></li>
+					</ul>
+					<!--</div>-->
+				</div>
+			</div>
+			<div class="element" style="background:url('image/img1Bg.png');background-repeat:no-repeat;background-size:100% 100%;position:relative;">
+				<a href="#">
+					<img id="img1purple" src="image/img1purple.png" style="position:absolute;top:0%;left:-750px;opacity:0;width: 40%;"/>
+					<!--left:169px;-->
+					<!--<img class="img"  src="image/daohang1.png"/>-->
+					<img id="img1Product" src="image/img1Product.png" style="position:absolute;top:-700px;left: 21%;opacity:0;width:11%;"/>
+					<!--top:115px;-->
+					<img id="img1shadow" src="image/img1shadow.png" style="position:absolute;bottom:-100%;left:22.5%;opacity:0;width:9.5%;"/>
+					<!--bottom:-40px;-->
+					<div id="img1FontFather" style="position:absolute;top: 18%;left: 52%;height:0px;overflow:hidden;">
+						<img src="image/img1Font.png" style="width:55%"/>
+					</div>
+					<!--height:278;-->
+					<a href="http://www.v-touch.net/a/chanpinzhongxin/">
+						<img id="img1but" src="image/img1but.png"  style="position:absolute;top: 45%;left:-1120px;opacity:0;width: 8%;"/>
+					</a>
+					<!--left:1120px-->
+					<img id="img1flower" src="image/img1flower.png"  style="position:absolute;bottom:-485px;left: 56%;opacity:0;width: 7%;"/>
+					<!--top:485px-->
+				</a>
+			</div>
+			<div class="element" perspective style="background:url(image/img2Bg.jpg);background-size:98% 95%;background-repeat:no-repeat;background-position:50% 100%;position:relative;">
+				<a href="#">
+					<!--<div style="height: 1255px;width: 44%;position: absolute;top: 47px;left: 46%;background: #bfe9fd;opacity: 1;"></div>-->
+					<!--<img class="img" src="image/daohang2.png"/>-->
+					<!--top:0%-->
+					<img id="img2Orange" src="image/img2Orange.png" style="width:10%;position:absolute;top:-21%;left:15%;opacity:0;"/>
+					<!--top:0%-->
+					<div id="img2FontFather" style="height:0%;overflow:hidden;position:absolute;top:30%;left:20%;">
+						<img width="72%" src="image/img2Font.png"/>
+					</div>
+					<!--height:33%-->
+					<img id="img2OrangeSlice" src="image/img2OrangeSlice.png" style="width:10%;position:absolute;bottom:-22%;left:26%;opacity:0;"/>
+					<!--bottom:9%-->
+					<a href="http://www.v-touch.net/a/zhongtianantai/">
+						<img id="img2OrangeSliceFont" src="image/img2OrangeSliceFont.png" style="width:8%;position:absolute;top:79%;left:27%;opacity:0;"/>
+					</a>
+					<img id="img2OrangeShadow" src="image/img2OrangeShadow.png" style="width:10%;position:absolute;top:105%;left:60%;opacity:0;"/>
+					<!--top:75%-->
+					<img id="img2FlowerTree" src="image/img2FlowerTree.png" style="width:26%;position:absolute;top:19%;left:100%;opacity:0;"/>
+					<!--top:18%-->
+					<img id="img2Progect" src="image/img2Progect.png" style="width:17%;position:absolute;top:-70%;left:59%;opacity:0;"/>
+					<!--left:52%-->
+				</a>
+			</div>
+			<div class="element" style="position:relative;">
+				<img id="img3big" src="image/img3Bigpurple.png" style="width:60%;position:absolute;top:40%;left:0%;opacity:0;"/>
+				<img id="img3product" src="image/img3Product.png" style="width:15%;position:absolute;top:30%;left:18%;opacity:0;"/>
+				<!--top:5%-->
+				<img id="img3small" src="image/img3smallPurple.png" style="width:50%;position:absolute;top:59%;left:-48%;opacity:0;"/>
+				<!--left:6%-->
+				<img id="img3flower" src="image/img3flower.png" style="width:28%;position:absolute;top:5%;left:28%;opacity:0;"/>
+				<div id="img3font" style="position:absolute;top:17%;left:55%;height:0%;overflow:hidden;" >
+					<img width="66%" src="image/img3Font.png"/>
+				</div>
+				<!--height:29%-->
+				<a href="http://www.v-touch.net/a/zhongtianantai/">
+					<img id="img3but" src="image/img3But.png" style="width:8%;position:absolute;top:55%;left:61%;opacity:0;"/>
+				</a>
+				<!--top:47%;-->
+				<img id="img3three" src="image/img3threeFlower.png" style="width:15%;position:absolute;top:0%;right:0%;"/>
+				<img id="img3green" src="image/img3green.png" style="width:30%;position:absolute;bottom:11%;right:0%;opacity:0;"/>
+				<!--right:21%-->
+			</div>
+			<div class="element" style="background:url('image/background.jpg');background-repeat:no-repeat;background-size:100% 100%;position:relative;">
+				<div style="width:100%;position:absolute;bottom:260px;">
+					<img src="image/banquan.png" style="display:block;margin:0 auto;"/>
+				</div>
+			</div>
+		</div>
+		<!--手机端-->
+		<div id="container-h5" style="display:none;width:100%;">
+			<div id="h5-head"  width="100%">
+				<img src="image/h5-head.jpg" width="100%;"/>
+			</div>
+			<div class="h5-element" style="position:relative;width:60%;margin:0 auto;">
+				<div id="h5-playFather" style="margin:0 auto;">
+					<div id="playElement" style="position:relative; width:580px;height:580px;margin:0 auto;">
+						<a href="http://player.youku.com/player.php/sid/XMzcyMDU2OTE2NA==/v.swf" target="_blcnk">
+							<img id="play" src="image/a.png" style="width:580px;height:580px;display:block;margin:0 auto;top:10px;left:10px;position:absolute;"/>
+							<img id="orange" src="image/OrangeRing.png" style="animation:rotate 10s linear infinite; width:575px;height:575px;position:absolute;left:13px;top:13px;"></img>
+						</a>	
+					</div>
+					<!--<div ">-->
+					<ul id="h5-font"  style="background-image:url('image/huawen.png')";>
+						<li><a href="http://www.v-touch.net/a/zhongtianantai/">V-SCLING SHAMPOO</a></li>
+						<li><a href="http://www.v-touch.net/a/jishutixi/">V-OLIM</a></li>
+						<li><a href="http://www.v-touch.net/a/chanpinzhongxin/">V-TOUCH</a></li>
+						<li><a href="http://www.v-touch.net/a/jiejuefangan/">关于我们</a></li>
+						<li><a href="http://www.v-touch.net/a/lianxiwomen/">联系我们</a></li>
+					</ul>
+					<!--</div>-->
+				</div>
+			</div>
+			<div class="h5-element" width="100%">
+				<a href="http://www.v-touch.net/a/chanpinzhongxin/">
+					<img src="image/h5-daohang1.png" width="100%;"/>
+				</a>
+			</div>
+			<div class="h5-element" width="100%">
+				<a href="http://www.v-touch.net/a/zhongtianantai/">
+					<img src="image/h5-daohang2.png" width="100%;"/>
+				</a>
+			</div>
+			<div class="h5-element" width="100%">
+				<a href="http://www.v-touch.net/a/jishutixi/">
+					<img src="image/h5-daohang3.png" width="100%;"/>
+				</a>
+			</div>
+			<div class="h5-element" style="width:100%;background:url('image/h5-footer.jpg');background-size:100% 100%;background-repeat:no-repeat;padding-bottom:18%;">
+				<img src="image/h5-banquan.png" style="display:block;margin:0 auto;"/>
+			</div>
+		</div>
+		<!--获取网页高度，动态添加-->
+		<script>
+			let width = document.body.clientWidth;
+			let height = document.documentElement.clientHeight;
+			// let r = parseInt(Math.random()*(255-1+1)-1);
+			// let g = parseInt(Math.random()*(255-1+1)-1);
+			// let b = parseInt(Math.random()*(255-1+1)-1);
+			
+			
+			$("div#container").css({"width":width,"height":height});
+			$("div.element").css({"width":width,"height":height});
+			$("img.img").css({"width":width,"height":height});
+			$("div#playFather").css({"width":width*0.8,"height":height});
+			$("body").css({"width":width*0.8,"height":height})
+			if(height <= 625){
+				$("div#playElement").css({"width":height,"height":height});
+				$("img#play").css({"width":height,"height":height});
+				$("img#orange").css({"width":height,"height":height});
+			}
+			
+			$("div#playElement").click(function(){
+				$(this).hide();
+				$("#vid").css({display:"block"});
+			})
+		</script>
+		<!--滚动特效-->
+		<script>
+			  $('body').mousewheel(function(event, delta) {
+			  	let height = document.documentElement.clientHeight;
+		        let dir = delta > 0 ? 'Up' : 'Down';
+		        if (dir == 'Up') {
+					//console.log("向上滚动");
+		            let num = $("div#container").css("bottom");
+		        	num = Number(num.slice(0,num.indexOf("p")));
+		        	if(num != (($("div.element").length-$("div.element").length)*height) && !$("div#container").is(":animated")){
+		        		num -= height;
+	        			$("div#container").animate({bottom:num},500);
+		        	}
+		        } else {
+					//console.log("向下滚动");
+		        	let num = $("div#container").css("bottom");
+		        	num = Number(num.slice(0,num.indexOf("p")));
+		        	if(num != (($("div.element").length-1)*height) && !$("div#container").is(":animated")){
+		        		num += height;
+		        		$("div#container").animate({bottom:num},500);
+		        		if(num === (($("div.element").length-4)*height)){
+		        			console.log("触发动画");
+		        			$("img#img1purple").animate({left:8+"%",opacity:1},1500);
+		        			$("img#img1Product").animate({top:11+"%",opacity:1},1500);
+		        			$("img#img1shadow").animate({bottom:0+"%",opacity:1},1500);
+		        			$("img#img1but").animate({left: 55+"%",opacity:1},1500);
+		        			$("img#img1flower").animate({bottom: 20+"%",opacity:1},1500);
+		        			setTimeout(function(){
+		        				$("div#img1FontFather").animate({height:18+"%"},500);
+		        			},1500);
+		        		}else if(num === (($("div.element").length-3)*height)){
+		        			$("img#img2Orange").animate({top:0+"%",opacity:1},1500);
+		        			$("img#img2OrangeShadow").animate({top:75+"%",opacity:1},1500);
+		        			$("img#img2Progect").animate({top:18+"%",opacity:1},1500);
+		        			$("img#img2FlowerTree").animate({left:52+"%",opacity:1},1500);
+		        			$("img#img2OrangeSlice").animate({bottom:9+"%",opacity:1},1500);
+							setTimeout(function(){
+		        				$("div#img2FontFather").animate({height:33+"%"},500);
+		        			},2000);
+		        			setTimeout(function(){
+		        				$("img#img2OrangeSliceFont").animate({opacity:1},1500)
+		        			},2500);
+		        		}else if(num === (($("div.element").length-2)*height)){
+		        			$("img#img3big").animate({opacity:1},3000);
+		        			setTimeout(function(){
+		        				$("img#img3product").animate({top:5+"%",opacity:1},2000);
+		        				$("img#img3flower").animate({opacity:1},2000);
+		        			},1000);
+		        			setTimeout(function(){
+		        				$("img#img3small").animate({left:9+"%",opacity:1},1000);
+		        			},3000);
+		        			setTimeout(function(){
+		        				$("img#img3small").animate({left:6+"%",opacity:1},300);
+		        			},4000);
+		        			setTimeout(function(){
+		        				$("img#img3but").animate({top:47+"%",opacity:1},1000);
+		        				$("img#img3green").animate({right:21+"%",opacity:1},1000);
+		        			},4300);
+		        			setTimeout(function(){
+		        				$("div#img3font").animate({height:29+"%"},500);
+		        			},5300);
+		        		}
+		        	}
+		        }
+		        
+		        return false;
+		    });
+		    
+		</script>
+		<!--头部动画-->
+		<script>
+			$("div#container>div.element:first-child>img#girl").animate({left:19+"%",opacity:1},1500);
+			$("div#container>div.element:first-child>img#headFont").animate({top:34+"%",opacity:1},1500);
+			$("div#container>div.element:first-child>img#product").animate({right:15+"%",opacity:1},1500);
+			let data = $("div#container").css("bottom");
+		</script>
+		<!--启用移动端-->
+		<script>
+			let h5Width = document.body.clientWidth;
+			if(h5Width < 850){
+				$("div#container").hide();
+				$("div#container-h5").show();
+				$("body").css({width:100+"%",overflow:"visible"});
+			}else{
+				$("div#container").show();
+				$("div#container-h5").hide();
+				$("body").css({overflow:"hidden"});
+			}
+		</script>
+	</body>
+</html>
